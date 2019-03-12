@@ -4,10 +4,14 @@
 #include <math.h>
 
 
-#define BUBLE_SORTING
+#define BUBBLE_SORTING //Define BUBBLE_SORTING for buble sorting or MERGE_SORTING for merge sorting (merge sorting does not work)
 
 
-#ifdef BUBLE_SORTING
+
+
+
+
+
 
 int compare_ascend(long double first_number, long double second_number) {
 
@@ -19,6 +23,12 @@ int compare_ascend(long double first_number, long double second_number) {
 	}
 
 }
+
+
+
+
+
+
 
 
 int compare_descend(long double first_number, long double second_number) {
@@ -33,6 +43,12 @@ int compare_descend(long double first_number, long double second_number) {
 }
 
 
+
+
+
+
+
+
 int compare_ascend_abs(long double first_number, long double second_number) {
 
 	if (fabs(first_number) < fabs(second_number)) {
@@ -43,6 +59,12 @@ int compare_ascend_abs(long double first_number, long double second_number) {
 	}
 
 }
+
+
+
+
+
+
 
 
 int compare_descend_abs(long double first_number, long double second_number) {
@@ -57,6 +79,12 @@ int compare_descend_abs(long double first_number, long double second_number) {
 }
 
 
+
+
+
+
+
+
 int replace(long double *first_el_ptr, long double *second_el_ptr) {
 
 	long double tmp = 0;
@@ -67,6 +95,14 @@ int replace(long double *first_el_ptr, long double *second_el_ptr) {
 	return 0;
 }
 
+
+
+
+
+
+
+
+#ifdef BUBBLE_SORTING
 
 int sort_array(long double *input_array_ptr, long long int number_of_el, int compare_func(long double, long double)) {
 
@@ -86,6 +122,27 @@ int sort_array(long double *input_array_ptr, long long int number_of_el, int com
 }
 
 #endif // BUBLE_SORTING
+
+
+
+
+
+
+
+
+#ifdef MERGE_SORTING
+
+int sort_array(long double *input_array_ptr, long long int num_of_el, int compare_func(long double, long double)) {
+	//TO DO
+}
+
+#endif // MERGE_SORTING
+
+
+
+
+
+
 
 
 int main() {
